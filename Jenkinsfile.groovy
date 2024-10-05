@@ -8,7 +8,7 @@ pipeline {
             steps {
                 // Récupération du code depuis le référentiel Git
                 git branch: 'main', 
-                    url: 'https://github.com/omar1717/Testt.git', 
+                    url: 'https://github.com/omar1717/Testt.git'
                     
             }
         }
