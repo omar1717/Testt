@@ -1,7 +1,11 @@
 pipeline {
     agent any
 
-  
+   triggers {
+        // Déclenche le pipeline lorsqu'un push est détecté sur Git
+        pollSCM('* * * * *') // Vérifie le dépôt toutes les minutes
+    }
+    
 
     stages {
         stage('Checkout Source Code') {
