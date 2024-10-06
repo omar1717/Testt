@@ -1,7 +1,6 @@
 pipeline {
     agent any
     stages {
-      stages {
         stage('Checkout Source Code') {
             steps {
                 // Récupération du code depuis le référentiel Git
@@ -33,5 +32,4 @@ pipeline {
                       message: "FAILURE: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' failed. Check it here: ${env.BUILD_URL}"
         }
     }
-}
 }
