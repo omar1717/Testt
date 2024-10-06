@@ -1,11 +1,13 @@
 pipeline {
     agent any
     stages {
-        stage('Checkout GIT') {
+      stages {
+        stage('Checkout Source Code') {
             steps {
-                git branch: 'main',
-                    url: 'git@github.com:bitri12/ski_station.git',
-                    credentialsId: 'github-credentials-id'
+                // Récupération du code depuis le référentiel Git
+                git branch: 'main', 
+                    url: 'https://github.com/omar1717/Testt.git'
+                    
             }
         }
         stage('Maven Clean') {
